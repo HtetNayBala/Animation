@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients and Background</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Sansita Swashed', cursive;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    .header{
+        background-image: url(Poe\ 1.jpg);
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 0;
+        
+        
+    }
+    .header::after{
+        content: "";
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        position: absolute; 
+        content: "";
+        /* width: 30px;  ဖၿည်းဖၿည်းချင်းရေးရန်
+        height: 30px; */
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        
+    }
+
+    .text{
+        width: 350px;
+        margin-left:180px ;
+        font-size: larger;
+        position: absolute;
+        z-index: 1;
+    }
+    .fixed{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: gray;
+        text-align: center;
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+    }
+    .fixed-icon{
+        width: 30px;
+    }
+
+    @media screen and (max-width: 480px){
+        .header{
+            
+        }
+        .header::after{
+            width: 100%;
+        }
+        .text{
+            width: 90%;
+            position: absolute;
+            margin-left: 10px;
+            font-size: larger;
+            z-index: 1;
+            
+        }
+    }
+   
+</style>
+</head>
+<body>
+    <div class="header" id="top">
+        <div class="text">
+            <h1>This is love</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde enim perferendis, a atque corporis aliquid eveniet dolores distinctio eum officia iste possimus doloribus voluptatem veniam recusandae laboriosam doloremque! Praesentium, tempore!</p>
+        </div>
+    </div>
+    
+    <section style="height: 100vh;">
+
+    </section>
+
+    <a class="fixed" href="#top">
+        <svg class="fixed-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg>
+    </a>
+
+    <script>
+       let arr = ["Ronaldo","Messi","Neymar","Mbappe","Hazard","Lewondoski"]
+    </script>
+</body>
+</html>
